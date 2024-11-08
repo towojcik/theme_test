@@ -1,0 +1,23 @@
+.sd-offcanvas-cart {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2b3136;
+  font-size: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  &--header {
+    flex: 1 0 0%;
+  }
+}
+
+.sd-offcanvas-cart-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .btn {
+    border-radius: 999px;
+  }
+}

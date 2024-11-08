@@ -1,0 +1,29 @@
+/*
+Override variable defaults
+==================================================
+This file is used to override default SCSS variables from the Shopware Storefront or Bootstrap.
+
+Because of the !default flags, theme variable overrides have to be declared beforehand.
+https://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults
+*/
+
+$font-family-base: 'Lato', Helvetica, Arial, sans-serif;
+$headings-font-family: 'Lato', Helvetica, Arial, sans-serif;
+
+$my-asset-path: '#{$sw-asset-theme-url}/bundles/mytheme/assets' !default;
+
+@font-face {
+  font-family: 'Lato';
+  src: url('#{$my-asset-path}/fonts/Lato.ttf') format('truetype');
+}
+
+.icon.icon-white {
+  color: var(--bs-white) !important;
+}
+
+// Override bootstrap variable example
+$red: white;
+
+// Override shopware wariable
+$sw-headline-color: #313131;
+$sw-color-brand-primary: #008F8C; // Is used in bottstraps $primary

@@ -1,0 +1,38 @@
+<!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
+{% block sw_cms_element_custom_text %}
+<div class="sw-cms-el-custom-text">
+  <div
+    v-if="element.config.content.source === 'mapped'"
+    class="sw-cms-el-custom-text__mapping-preview content-editor"
+    v-html="$sanitize(demoValue)"
+  ></div>
+
+  <sw-text-editor
+    v-else
+    v-model="element.config.content.value"
+    :disabled="disabled"
+    :vertical-align="element.config.verticalAlign.value"
+    :allow-inline-data-mapping="true"
+    :is-inline-edit="true"
+    sanitize-input
+    enable-transparent-background
+    @blur="onBlur"
+    @input="onInput"
+  />
+
+  <div
+    class="accordion-item"
+    @click="toggleAccordion"
+  >
+    <div class="acordion-button">
+      Accordion Item
+    </div>
+
+    <div class="accordion-content" v-show="isOpen">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

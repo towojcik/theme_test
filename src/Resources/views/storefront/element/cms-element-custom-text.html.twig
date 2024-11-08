@@ -1,0 +1,34 @@
+{% block element_custom_text %}
+  {%  set config = element.config %}
+
+  <div class="cms-element-{{ element.type }}{% if config.verticalAlign.value %} has-vertical-alignment{% endif %}">
+    {% block element_custom_text_alignment %}
+      {% if config.verticalAlign.value %}
+        <div class="cms-element-alignment{% if config.verticalAlign.value == "center" %} align-self-center{% elseif config.verticalAlign.value == "flex-end" %} align-self-end{% else %} align-self-start{% endif %}">
+      {% endif %}
+        {% block element_custom_text_inner %}
+          {{ config.content.value|raw }}
+        {% endblock %}
+      {% if config.verticalAlign.value %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block custom_accordion %}
+      <div
+        class="accordion-item"
+        data-js-accordion-handler
+      >
+        <div class="acordion-button">
+          Accordion Item
+        </div>
+
+        <div class="accordion-content js-accordion-content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+    {% endblock %}
+  </div>
+{% endblock %}

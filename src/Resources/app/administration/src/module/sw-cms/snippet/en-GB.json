@@ -1,0 +1,9 @@
+{
+  "sw-cms": {
+    "elements": {
+      "custom-text": {
+        "label": "Custom text example"
+      }
+    }
+  }
+}

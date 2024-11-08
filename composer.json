@@ -1,0 +1,25 @@
+{
+  "name": "speardevs/theme",
+  "description": "Theme demo plugin for SpearDevs",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "version": "0.1.2",
+  "authors": [
+    {
+      "name": "SpearDevs",
+      "homepage": "https://speardevs.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "SpearDevs\\Theme\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "SpearDevs\\Theme\\SpearDevsTheme",
+    "label": {
+      "de-DE": "SpearDevsTheme",
+      "en-GB": "SpearDevsTheme"
+    }
+  }
+}
